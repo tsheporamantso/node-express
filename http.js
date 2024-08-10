@@ -4,7 +4,7 @@ const url = require("url");
 const server = http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
   if (pathname === "/" || pathname === "/home") {
-    res.end("Hello from the server!");
+    res.end("Welcome to home page");
   } else {
     res.writeHead(200, {
       "Content-type": "text/html",
@@ -17,6 +17,10 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen("8000", "localhost", () => {
-  console.log("Listerning to port 8000 on localhost");
+server.listen("8000", "localhost", (err) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log("Listerning to port 8000 on localhost");
+  }
 });
