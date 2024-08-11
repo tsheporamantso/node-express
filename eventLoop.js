@@ -3,6 +3,9 @@
 ? The event loop it's what allows node.js to perform non-blocking input/output operations, despite the fact that JavaScript single-threated - by offloading operations to to the kernel whenever possible.
 * In essence we are offloading time consuming operations with CallBack function e.g. Asynchronous readFile that takes a callback function!
 * setTimeout and setInterval() are also Async function thus offloaded 
+! https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick 
+! also check event loop on youtube(What the hack... by Phillip Robert) and Morning keynote- Everything You need to know...
+! course-api.com
 */
 
 /*
@@ -24,3 +27,4 @@ setInterval(() => {
 }, 2000);
 
 console.log("I will run first");
+console.time();
